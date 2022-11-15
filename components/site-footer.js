@@ -1,10 +1,8 @@
 import copyrightPrivacy from "./copyrights-privacy.js";
-import facebookSvg from "./facebook.js";
-import instagramSvg from "./instagram.js";
-import linkedInSvg from "./linkedin.js";
 import ulListComponent from "./ul-list-component.js";
 
-export default function siteFooter() {
+export default function siteFooter(props) {
+  let { footerMenuItems, listItemsObj, listIconsObj } = props;
   const siteFooterEl = document.createElement('footer');
   siteFooterEl.classList.add('site-footer');
 
@@ -24,60 +22,6 @@ export default function siteFooter() {
   const footerWidgetsLeftEl = document.createElement('div');
   footerWidgetsLeftEl.classList.add('footer-widget-left');
 
-
-  const footerMenuItems = {
-    listItems: [
-      {
-        title: 'Studentams',
-        url: '#'
-      },
-      {
-        title: 'Jei galiu as - gali ir tu!',
-        url: '#'
-      },
-      {
-        title: 'Verslui',
-        url: '#'
-      },
-      {
-        title: 'Programos',
-        url: '#'
-      },
-      {
-        title: 'Nemokamos studijos',
-        url: '#'
-      },
-      {
-        title: 'UZT kursai',
-        url: '#'
-      },
-      {
-        title: 'Programavimo kalbos',
-        url: '#'
-      },
-      {
-        title: 'Apie mus',
-        url: '#'
-      },
-      {
-        title: 'Naujienos',
-        url: '#'
-      },
-      {
-        title: 'Karjera - We are hiring!',
-        url: '#'
-      },
-      {
-        title: 'ES parama',
-        url: '#'
-      },
-      {
-        title: 'Kontaktai',
-        url: '#'
-      }],
-    liClassName: 'menu-item'
-  };
-
   const footerWidgetsUlEl = ulListComponent(footerMenuItems);
 
   const footerWidgetsCenterEl = document.createElement('div');
@@ -86,41 +30,11 @@ export default function siteFooter() {
   const footerWidgetsCenterHeadingEl = document.createElement('h2');
   footerWidgetsCenterHeadingEl.textContent = 'Vilnius';
 
-  const listItemsObj = {
-    listItems: [
-      {
-        title: 'Saulėtakio al. 15,<br>Vilnius',
-        url: '#'
-      },
-      {
-        title: 'Antakalnio g. 17,<br>Vilnius',
-        url: '#'
-      },
-    ]
-  }
-
   const footerWidgetCenterUlEl = ulListComponent(listItemsObj);
 
 
   const footerWidgetsRightEl = document.createElement('div');
   footerWidgetsRightEl.classList.add('footer-widget-right');
-
-  const listIconsObj = {
-    listItems: [
-      {
-        title: instagramSvg(),
-        url: 'http://instagram.com'
-      },
-      {
-        title: facebookSvg(),
-        url: 'http://facebook.com'
-      },
-      {
-        title: linkedInSvg(),
-        url: 'http://linkedin.com'
-      },
-    ]
-  }
 
   const footerWidgetRightUlEl = ulListComponent(listIconsObj);
 
