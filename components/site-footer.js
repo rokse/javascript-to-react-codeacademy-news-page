@@ -1,3 +1,4 @@
+import copyrightPrivacy from "./copyrights-privacy.js";
 import facebookSvg from "./facebook.js";
 import instagramSvg from "./instagram.js";
 import linkedInSvg from "./linkedin.js";
@@ -123,15 +124,7 @@ export default function siteFooter() {
 
   const footerWidgetRightUlEl = ulListComponent(listIconsObj);
 
-  const footerInfoEl = document.createElement('div');
-  footerInfoEl.classList.add('footer-info');
-  footerInfoEl.innerHTML = `<div class="copyright">
-                              © By UAB Programuok | CodeAcademy šeimos narys – 
-                              <a href="#">CodeAcademy Kids</a>
-                            </div>
-                            <div class="privacy-policy">
-                              <a href="#">Privatumo politika</a>
-                            </div>`;
+  const footerInfoEl = copyrightPrivacy();
 
   const footerCertificatesEl = document.createElement('div');
   footerCertificatesEl.classList.add('footer-certificates');
