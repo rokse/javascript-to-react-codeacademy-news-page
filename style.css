@@ -1,0 +1,347 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a.button {
+    background-color: #1200ff;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+.main-header .main-navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-left: 60px;
+}
+
+.main-header .main-navigation ul.main-menu {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+
+.main-header .main-navigation ul.main-menu li.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
+#root, .wrap {
+        max-width: 1230px;
+        padding: 0 30px;
+        margin: 0 auto;
+        width: 100%;
+}
+
+.site-wrapper {
+    width: 1170px;
+    height: 2155px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+            "news side"
+            ". side";
+}
+
+.site-wrapper .news-wrapper {
+    grid-area: news;
+    display: block;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 2fr 1fr;
+    grid-template-areas: 
+            "main-news main-news"
+            "secondary-news secondary-news"
+            "news-link news-link"; */
+}
+
+.site-wrapper h1 {
+    font-size: 42px;
+    margin: 0 25px 30px 0;
+}
+
+.site-wrapper .news-wrapper .main-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-right: 30px;
+}
+
+.news-wrapper .main-news .main-news-card {
+    background-color: white;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.news-wrapper .main-news .main-news-card img {
+    height: 244px;
+    width: 364px;
+}
+
+.news-wrapper .main-news .main-news-card .card-info {
+    padding: 38px;
+}
+
+.news-wrapper .main-news .main-news-card .card-info .news-description {
+    font-size: 24px;
+    margin: 0 0 11px;
+}
+
+.news-wrapper .main-news .main-news-card .card-info .news-category {
+    margin: 0 0 13px;
+}
+
+.news-wrapper .news-category {
+    color: #1200ff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.news-date {
+    font-size: 12px;
+    margin: 0;
+}
+
+.news-wrapper .secondary-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    margin-right: 30px;
+}
+
+.news-wrapper .secondary-news .secondary-news-card {
+    display: flex;
+    gap: 15px;
+}
+
+h2 {
+    font-size: 14px;
+    margin: 0 0 11px;
+}
+
+.news-wrapper .secondary-news .secondary-news-card .secondary-news-card-description p {
+    margin: 0 0 12px;
+}
+
+.news-wrapper .secondary-news .secondary-news-card img {
+    width: 120px;
+    height: 80px;
+}
+.news-link {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 33px;
+}
+
+.news-link img {
+    width: 19px;
+    height: 33px;
+}
+
+.news-link p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.side-content {
+    grid-area: side;
+    max-width: 365px;
+}
+
+.side-content .podcasts-wrapper .podcasts-card {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.side-content .podcasts-wrapper .podcasts-card img {
+    width: 365px;
+    height: 70px;
+}
+
+.side-content .podcasts-wrapper .podcasts-card .podcasts-card-description {
+    padding: 17px 20px;
+}
+
+.side-content .events-wrapper .news-link {
+    margin: 0;
+}
+
+.events-wrapper img:first-child {
+    width: 100%;
+    height: 243px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.events-wrapper .event-card {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0 0 50px 0;
+}
+
+.events-wrapper .event-card p {
+    text-transform: uppercase;
+    font-size: 10px;
+    margin: 0 0 3px;
+}
+
+.events-wrapper .event-card h2 {
+    font-size: 24px;
+}
+
+.events-wrapper .event-card .event-date-floatter {
+    max-width: 60px;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    margin: -60px 0 29px 10px;
+    position: relative;
+}
+.events-wrapper .event-card .event-date-floatter .day {
+    padding: 9px 4px 10px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.events-wrapper .event-card .event-date-floatter .month{
+    background: #ff00e9;
+    letter-spacing: 1px;
+    font-size: 10px;
+    line-height: 1.2;
+    padding: 4px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.site-footer {
+    padding: 140px 0 135px;
+    background-color: black;
+    color: white;   
+}
+
+
+.site-footer h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 0 0 3.2em 0;
+}
+
+.site-footer .footer-container .footer-logo {
+    display: block;
+    margin-bottom: 88px;
+}
+
+.site-footer .footer-container .footer-widgets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-footer .footer-container .footer-widgets .footer-widget-left {
+    width: 26%;
+    padding-top: 0;
+    padding-right: 40px;
+}
+
+.site-footer .footer-container .footer-widgets .footer-widget-center {
+    width: 55%;
+    padding-right: 40px;
+}
+
+.site-footer .footer-container .footer-widgets .footer-widget-right {
+    width: 19%;
+}
+
+.site-footer .footer-container .footer-widgets .footer-widget-right li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.site-footer .footer-container .footer-widgets ul {
+    padding: 0 0 32px;
+    list-style: none;
+    margin: 0;
+}
+
+.site-footer .footer-container .footer-widgets li {
+    margin: 0 0 16px 0;
+}
+
+.site-footer .footer-container a {
+    margin-bottom: 16px;
+    color: #929497;
+    display: inline-block;
+}
+
+.site-footer .footer-container .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 252px;
+}
+
+.site-footer .footer-container .footer-info .copyright {
+    width: 60%;
+    padding-right: 30px;
+}
+
+.site-footer .footer-decoration {
+    position: relative;
+}
+
+.site-footer .footer-decoration img {
+    position: absolute;
+    bottom: -133px;
+    right: 0;
+    width: 425px;
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
+.site-footer a:hover path {
+    fill: #ffffff;
+}
