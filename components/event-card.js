@@ -1,4 +1,6 @@
-export default function eventCard() {
+export default function eventCard(data) {
+  let { day, month, eventLocation, eventDescription } = data;
+
   const eventCardEl = document.createElement('div');
   eventCardEl.classList.add('event-card');
 
@@ -7,17 +9,17 @@ export default function eventCard() {
   
   const eventDateFloatterDay = document.createElement('div');
   eventDateFloatterDay.classList.add('day');
-  eventDateFloatterDay.textContent = '5';
+  eventDateFloatterDay.textContent = day;
   
   const eventDateFloatterMonth = document.createElement('div');
   eventDateFloatterMonth.classList.add('month');
-  eventDateFloatterMonth.textContent = 'Rug';
+  eventDateFloatterMonth.textContent = month;
 
   const eventTypeEl = document.createElement('p');
-  eventTypeEl.textContent = 'Online';
+  eventTypeEl.textContent = eventLocation;
 
   const eventHeadingEl = document.createElement('h2');
-  eventHeadingEl.textContent = 'Intro: Dirbtinis intelektas ir Duomenų mokslas';
+  eventHeadingEl.textContent = eventDescription;
 
   eventDateFloatterEl.append(eventDateFloatterDay, eventDateFloatterMonth);
 

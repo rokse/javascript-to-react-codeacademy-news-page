@@ -9,7 +9,14 @@ export default function eventWrapper() {
   eventImageEl.src = 'https://codeacademy.lt/wp-content/uploads/2022/10/279056133_5029178327168536_4126724437953769972_n-1.png';
   eventImageEl.alt = 'Event image';
 
-  eventWrapperEl.append(eventImageEl, eventCard(), eventCard(), eventCard(), newsLink('Daugiau'));
+  const eventInfoObj = {
+    day: '4',
+    month: 'Rug',
+    eventLocation: 'Online',
+    eventDescription: 'Intro: Dirbtinis intelektas ir Duomenų mokslas'
+  }
+
+  eventWrapperEl.append(eventImageEl, eventCard(eventInfoObj), eventCard(eventInfoObj), eventCard(eventInfoObj), newsLink('Daugiau'));
 
   return eventWrapperEl;
 };
