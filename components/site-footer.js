@@ -1,3 +1,5 @@
+import ulListComponent from "./ul-list-component.js";
+
 export default function siteFooter() {
   const siteFooterEl = document.createElement('footer');
   siteFooterEl.classList.add('site-footer');
@@ -18,36 +20,82 @@ export default function siteFooter() {
   const footerWidgetsLeftEl = document.createElement('div');
   footerWidgetsLeftEl.classList.add('footer-widget-left');
 
-  const footerWidgetsUlEl = document.createElement('ul');
 
-  const footerMenuItems = ['Studentams', 'Jei galiu as - gali ir tu!', 'Verslui', 'Programos', 'Nemokamos studijos', 'UZT kursai', 'Programavimo kalbos', 'Apie mus', 'Naujienos', 'Karjera - We are hiring!', 'ES parama', 'Kontaktai'];
+  const footerMenuItems = {
+    listItems: [
+      {
+        title: 'Studentams',
+        url: '#'
+      },
+      {
+        title: 'Jei galiu as - gali ir tu!',
+        url: '#'
+      },
+      {
+        title: 'Verslui',
+        url: '#'
+      },
+      {
+        title: 'Programos',
+        url: '#'
+      },
+      {
+        title: 'Nemokamos studijos',
+        url: '#'
+      },
+      {
+        title: 'UZT kursai',
+        url: '#'
+      },
+      {
+        title: 'Programavimo kalbos',
+        url: '#'
+      },
+      {
+        title: 'Apie mus',
+        url: '#'
+      },
+      {
+        title: 'Naujienos',
+        url: '#'
+      },
+      {
+        title: 'Karjera - We are hiring!',
+        url: '#'
+      },
+      {
+        title: 'ES parama',
+        url: '#'
+      },
+      {
+        title: 'Kontaktai',
+        url: '#'
+      }],
+    liClassName: 'menu-item'
+  };
 
-  footerMenuItems.forEach(item => {
-    const menuItemEl = document.createElement('li');
-    menuItemEl.classList.add('menu-item');
-
-    const menuItemLinkEl = document.createElement('a');
-    menuItemLinkEl.href = '#'
-    menuItemLinkEl.textContent = item;
-
-    menuItemEl.append(menuItemLinkEl);
-
-    footerWidgetsUlEl.append(menuItemEl);
-  });
+  const footerWidgetsUlEl = ulListComponent(footerMenuItems);
 
   const footerWidgetsCenterEl = document.createElement('div');
   footerWidgetsCenterEl.classList.add('footer-widget-center');
 
-  const footerWidgetCenterUlEl = document.createElement('ul');
-  footerWidgetCenterUlEl.innerHTML = `<li>
-                                        <h2>Vilnius</h2>
-                                      </li>
-                                      <li>
-                                        <a href="#">Saulėtakio al. 15,<br>Vilnius</a>
-                                      </li>
-                                      <li>
-                                        <a href="#">Antakalnio g. 17,<br>Vilnius</a>
-                                      </li>`;
+  const footerWidgetsCenterHeadingEl = document.createElement('h2');
+  footerWidgetsCenterHeadingEl.textContent = 'Vilnius';
+
+  const listItemsObj = {
+    listItems: [
+      {
+        title: 'Saulėtakio al. 15,<br>Vilnius',
+        url: '#'
+      },
+      {
+        title: 'Antakalnio g. 17,<br>Vilnius',
+        url: '#'
+      },
+    ]
+  }
+
+  const footerWidgetCenterUlEl = ulListComponent(listItemsObj);
 
 
   const footerWidgetsRightEl = document.createElement('div');
@@ -85,7 +133,7 @@ export default function siteFooter() {
 
   footerWidgetsLeftEl.append(footerWidgetsUlEl);
 
-  footerWidgetsCenterEl.append(footerWidgetCenterUlEl);
+  footerWidgetsCenterEl.append(footerWidgetsCenterHeadingEl, footerWidgetCenterUlEl);
 
   footerWidgetsRightEl.append(footerWidgetRightUlEl);
 

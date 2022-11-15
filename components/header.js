@@ -1,3 +1,5 @@
+import ulListComponent from "./ul-list-component.js";
+
 export default function header() {
   const headerElement = document.createElement('header');
   headerElement.classList.add('main-header');
@@ -12,23 +14,41 @@ export default function header() {
   const navigation = document.createElement('nav');
   navigation.classList.add('main-navigation');
 
-  const mainMenu = document.createElement('ul');
-  mainMenu.classList.add('main-menu');
+  const menuItemsObj =
+  {
+    listItems: [{
+      title: 'Verslui',
+      url: '#'
+    },
+    {
+      title: 'Studentams',
+      url: '#'
+    },
+    {
+      title: 'Programos',
+      url: '#'
+    },
+    {
+      title: 'Apie mus',
+      url: '#'
+    },
+    {
+      title: 'Naujienos',
+      url: '#'
+    },
+    {
+      title: 'IT testas',
+      url: '#'
+    },
+    {
+      title: 'Kontaktai',
+      url: '#'
+    }],
+    liClassName: 'menu-item',
+    ulClassName: 'main-menu'
+  };
 
-  const menuItemsArr = ['Verslui', 'Studentams', 'Programos', 'Apie mus', 'Naujienos', 'IT testas', 'Kontaktai'];
-
-  menuItemsArr.forEach(item => {
-    const listEl = document.createElement('li');
-    listEl.classList.add('menu-item');
-
-    const listLinkEl = document.createElement('a');
-    listLinkEl.href = '#';
-    listLinkEl.textContent = item;
-
-    listEl.append(listLinkEl);
-
-    mainMenu.append(listEl);
-  });
+  const mainMenu = ulListComponent(menuItemsObj);
 
   const callLinkEl = document.createElement('a');
   callLinkEl.classList.add('button');
