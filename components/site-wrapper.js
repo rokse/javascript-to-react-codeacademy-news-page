@@ -8,9 +8,6 @@ export default function siteWrapper() {
   const newsCardData = {
     mainNewsInfo: {
       mainClass: 'main-news',
-      mainNewsCardClass: 'main-news-card',
-      cardInfoClass: 'card-info',
-      newsDescriptionClass: 'news-description',
       newsInfo: [
         {
           imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/03/charlesdeluvio-FdDkfYFHqe4-unsplash-2048x1988.jpg',
@@ -28,9 +25,6 @@ export default function siteWrapper() {
     },
     secondaryNewsInfo: {
       mainClass: 'secondary-news',
-      mainNewsCardClass: 'secondary-news-card',
-      cardInfoClass: 'secondary-news-card-description',
-      newsDescriptionClass: 'secondary-news-description',
       newsInfo: [
         {
           imageUrl: 'https://codeacademy.lt/wp-content/uploads/2021/09/pexels-tima-miroshnichenko-5428258-2048x1384.jpg',

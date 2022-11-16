@@ -1,26 +1,25 @@
 export default function mainNewsCard(data) {
   console.log(data)
-  const { info, mainNewsCardClass, cardInfoClass, newsDescriptionClass } = data;
-  const { imageUrl, newsCategory, newsDescription, newsDate } = info;
+  const { imageUrl, newsCategory, newsDescription, newsDate } = data;
 
   const cardLinkEl = document.createElement('a');
   cardLinkEl.href = '#';
   
   const mainNewsCard = document.createElement('div');
-  mainNewsCard.classList.add(mainNewsCardClass);
+  mainNewsCard.classList.add('card');
 
   const imageEl = document.createElement('img');
   imageEl.src = imageUrl;
   
   const cardInfoEl = document.createElement('div');
-  cardInfoEl.classList.add(cardInfoClass);
+  cardInfoEl.classList.add('card-info');
 
   const newsCategoryEl = document.createElement('p');
   newsCategoryEl.classList.add('news-category');
   newsCategoryEl.textContent = newsCategory;
 
   const newsDescriptionEl = document.createElement('h2');
-  newsDescriptionEl.classList.add(newsDescriptionClass);
+  newsDescriptionEl.classList.add('news-description');
   newsDescriptionEl.textContent = newsDescription;
 
   const newsDateEl = document.createElement('p');

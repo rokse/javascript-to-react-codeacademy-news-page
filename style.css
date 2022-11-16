@@ -78,13 +78,6 @@ a.button {
 .site-wrapper .news-wrapper {
     grid-area: news;
     display: block;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr 2fr 1fr;
-    grid-template-areas: 
-            "main-news main-news"
-            "secondary-news secondary-news"
-            "news-link news-link"; */
 }
 
 .site-wrapper h1 {
@@ -99,27 +92,27 @@ a.button {
     margin-right: 30px;
 }
 
-.news-wrapper .main-news .main-news-card {
+.news-wrapper .main-news .card {
     background-color: white;
     margin-bottom: 30px;
     display: block;
 }
 
-.news-wrapper .main-news .main-news-card img {
+.news-wrapper .main-news .card img {
     height: 244px;
     width: 364px;
 }
 
-.news-wrapper .main-news .main-news-card .card-info {
+.news-wrapper .main-news .card .card-info {
     padding: 38px;
 }
 
-.news-wrapper .main-news .main-news-card .card-info .news-description {
+.news-wrapper .main-news .card .card-info .news-description {
     font-size: 24px;
     margin: 0 0 11px;
 }
 
-.news-wrapper .main-news .main-news-card .card-info .news-category {
+.news-wrapper .main-news .card .card-info .news-category {
     margin: 0 0 13px;
 }
 
@@ -142,7 +135,7 @@ a.button {
     margin-right: 30px;
 }
 
-.news-wrapper .secondary-news .secondary-news-card {
+.news-wrapper .secondary-news .card {
     display: flex;
     gap: 15px;
 }
@@ -152,14 +145,15 @@ h2 {
     margin: 0 0 11px;
 }
 
-.news-wrapper .secondary-news .secondary-news-card .secondary-news-card-description p {
+.news-wrapper .secondary-news .card .card-info p {
     margin: 0 0 12px;
 }
 
-.news-wrapper .secondary-news .secondary-news-card img {
+.news-wrapper .secondary-news .card img {
     width: 120px;
     height: 80px;
 }
+
 .news-link {
     background-color: white;
     margin-right: 30px;
