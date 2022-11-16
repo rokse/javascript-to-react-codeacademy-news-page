@@ -1,38 +1,20 @@
-import secondaryNewsCard from "./secondary-news-card.js";
+import mainNewsCard from "./main-news-card.js";
 
-export default function secondaryNews() {
+export default function secondaryNews(props) {
+  let { secondaryNewsCardInfo, secondaryNewsCardInfoTwo, secondaryNewsCardInfoThree, secondaryNewsCardInfoFour, mainNewsCardClass, cardInfoClass, newsDescriptionClass } = props;
+  
   const secondaryNewsEl = document.createElement('div');
   secondaryNewsEl.classList.add('secondary-news');
 
-  const newsCardInfo = {
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2021/09/pexels-tima-miroshnichenko-5428258-2048x1384.jpg',
-    newsCategory: 'Technologijų ritmu',
-    newsDescription: 'Kaip po chaotiškų mokslo metų pandemijos apsuptyje padėti vaikams sugrįžti į klases?',
-    newsDate: '2022-03-23'
-  }
+  const newsCardInfo = mainNewsCard( secondaryNewsCardInfo, mainNewsCardClass, cardInfoClass, newsDescriptionClass );
 
-  const newsCardInfoTwo = {
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2021/09/pexels-tima-miroshnichenko-5428258-2048x1384.jpg',
-    newsCategory: 'Technologijų ritmu',
-    newsDescription: 'Kaip po chaotiškų mokslo metų pandemijos apsuptyje padėti vaikams sugrįžti į klases?',
-    newsDate: '2022-03-23'
-  }
+  const newsCardInfoTwo = mainNewsCard( secondaryNewsCardInfoTwo, mainNewsCardClass, cardInfoClass, newsDescriptionClass );
 
-  const newsCardInfoThree = {
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2021/09/pexels-tima-miroshnichenko-5428258-2048x1384.jpg',
-    newsCategory: 'Technologijų ritmu',
-    newsDescription: 'Kaip po chaotiškų mokslo metų pandemijos apsuptyje padėti vaikams sugrįžti į klases?',
-    newsDate: '2022-03-23'
-  }
+  const newsCardInfoThree = mainNewsCard( secondaryNewsCardInfoThree, mainNewsCardClass, cardInfoClass, newsDescriptionClass );
 
-  const newsCardInfoFour = {
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2021/09/pexels-tima-miroshnichenko-5428258-2048x1384.jpg',
-    newsCategory: 'Technologijų ritmu',
-    newsDescription: 'Kaip po chaotiškų mokslo metų pandemijos apsuptyje padėti vaikams sugrįžti į klases?',
-    newsDate: '2022-03-23'
-  }
+  const newsCardInfoFour = mainNewsCard( secondaryNewsCardInfoFour, mainNewsCardClass, cardInfoClass, newsDescriptionClass );
 
-  secondaryNewsEl.append(secondaryNewsCard(newsCardInfo), secondaryNewsCard(newsCardInfoTwo), secondaryNewsCard(newsCardInfoThree), secondaryNewsCard(newsCardInfoFour));
+  secondaryNewsEl.append(newsCardInfo, newsCardInfoTwo, newsCardInfoThree, newsCardInfoFour);
 
   return secondaryNewsEl;
 }
