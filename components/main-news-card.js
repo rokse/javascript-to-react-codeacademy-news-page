@@ -1,5 +1,7 @@
 export default function mainNewsCard(data) {
-  const {imageUrl, newsCategory, newsDescription, newsDate, mainNewsCardClass, cardInfoClass, newsDescriptionClass} = data;
+  console.log(data)
+  const { info, mainNewsCardClass, cardInfoClass, newsDescriptionClass } = data;
+  const { imageUrl, newsCategory, newsDescription, newsDate } = info;
 
   const cardLinkEl = document.createElement('a');
   cardLinkEl.href = '#';
